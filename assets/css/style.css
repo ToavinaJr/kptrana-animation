@@ -1,0 +1,456 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+    height: 100vh;
+}
+
+/* ******  Styling the animaton    ****** */
+
+.mario-container{
+    width: 350px;
+    height: fit-content;
+    overflow-y: hidden;
+}
+
+.mario{
+    background: url(../images/mario-5.png);
+    width: 80px;
+    height: 90px;
+    animation: marioWalking 3s ease 2s infinite;
+}
+
+
+@keyframes marioWalking{
+    0%{
+        background: url(../images/mario-1.png);
+        transform: translate(0px);
+    }
+    5%{
+        background: url(../images/mario-3.png);
+        transform: translate(10px);
+    }
+    10%{
+        background: url(../images/mario-4.png);
+        transform: translate(20px);
+    }
+    25%{
+        background: url(../images/mario-5.png);
+        transform: translate(30px);
+    }
+    30%{
+        background: url(../images/mario-1.png);
+        transform: translate(40px);
+    }
+    35%{
+        background: url(../images/mario-2.png);
+        transform: translate(50);
+    }
+    40%{
+        background: url(../images/mario-3.png);
+        transform: translate(60px);
+    }
+    45%{
+        background: url(../images/mario-4.png);
+        transform: translate(70px);
+    }
+    50%{
+        background: url(../images/mario-5.png);
+        transform: translate(80px);
+    }
+    55%{
+        background: url(../images/mario-1.png);
+        transform: translate(90px);
+    }
+    60%{
+        background: url(../images/mario-2.png);
+        transform: translate(100px);
+    }
+    65%{
+        background: url(../images/mario-1.png);
+        transform: translate(110px);
+    }
+    70%{
+        background: url(../images/mario-3.png);
+        transform: translate(120px);
+    }
+    75%{
+        background: url(../images/mario-4.png);
+        transform: translate(130px);
+    }
+    80%{
+        background: url(../images/mario-5.png);
+        transform: translate(140px);
+    }
+    85%{
+        background: url(../images/mario-1.png);
+        transform: translate(150px);
+    }
+    90%{
+        background: url(../images/mario-2.png);
+        transform: translate(160px);
+    }
+    95%{
+        background: url(../images/mario-3.png);
+        transform: translate(170px);
+    }
+    100%{
+        background: url(../images/mario-4.png);
+        transform: translate(180px);
+    }
+}
+
+
+/* **************************************** */
+.box{
+    text-align: center;
+    width: 350px;
+    font-size: 50px;
+    background: #161515;
+    animation: wiggle 2s linear infinite;
+    color: #e5e90d;
+    height: fit-content;
+    border-radius: 10px;
+    border-bottom: solid 5px crimson;
+}
+
+@keyframes wiggle {
+    0%, 10%{
+        transform: rotateZ(12deg);
+    }
+    25%, 30%{
+        transform: rotateZ(-12deg)
+    }
+    40%, 45%{
+        transform: rotateZ(10deg);
+    }
+    60%, 65%{
+        transform:rotateZ(-8deg);
+    }
+    90%, 100%{
+        transform: rotateZ(0deg);
+    } 
+}
+
+
+/* *************************************** */
+
+.steam-container{
+    background: rgb(81, 81, 243);
+    border-radius: 10px;
+    width: 350px;
+    height: 350px;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.steam{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 300px;
+    left: 40%;
+}
+
+.steam-1{
+    animation: steam-1-animation 1s ease-out infinite;
+}
+
+@keyframes steam-1-animation {
+    0% {
+        transform: translateY(0) translateX(0) scale(0.25);
+        opacity: 0.2;
+    }
+    100% {
+        transform: translateY(-200px) translateX(-20px) scale(1);
+        opacity: 0;
+    }
+}
+
+.steam-2{
+    animation: steam-2-animation 2s ease-out infinite;
+}
+
+@keyframes steam-2-animation {
+    0% {
+        transform: translateY(0) translateX(0) scale(0.25);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-200px) translateX(20px) scale(1);
+        opacity: 0;
+    }
+}
+
+.steam-3{
+    animation: steam-3-animation 3s ease-out infinite;
+}
+
+@keyframes steam-3-animation {
+    0% {
+        transform: translateY(0) translateX(0) scale(0.25);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-200px) translateX(30px) scale(1);
+        opacity: 0;
+    }
+  }
+
+.steam-4{
+    animation: steam-4-animation 4s ease-in-out infinite;
+}
+
+@keyframes steam-4-animation {
+    0% {
+        transform: translateY(0) translateX(0) scale(0.25);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-300px) translateX(-30px) scale(0.9);
+        opacity: 0;
+    }
+  }
+
+.steam-5{
+    animation: steam-5-animation 5s ease-in-out infinite;
+}
+
+@keyframes steam-5-animation {
+    0% {
+        transform: translateY(0) translateX(0) scale(0.2);
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateY(-200px) translateX(-50px) scale(1);
+        opacity: 0;
+    }
+  }
+
+.steam-6{
+    animation: steam-6-animation 6s ease-in infinite;
+}
+
+@keyframes steam-6-animation {
+    0% {
+        transform: translateY(0) translateX(0) scale(0.15);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-200px) translateX(-30px) scale(1);
+        opacity: 0;
+    }
+  }
+
+/* ******************************* */
+.spinner{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border-top: 10px solid #efff16;
+    border-bottom: 10px solid green;
+    border-left: 10px solid red;
+    border-right: 10px solid black;
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+
+/* ******************************** */
+
+.buble-container{
+    display: flex;
+    width: 200px;
+    height: 120px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.buble{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.buble-1{
+    animation: bubleAnimation .6s ease-in-out alternate .2s infinite; 
+    background: green;
+}
+
+.buble-2{
+    animation: bubleAnimation .6s ease-in-out alternate .4s infinite; 
+    background: red;
+}
+.buble-3{
+    animation: bubleAnimation .6s ease-in-out alternate .6s infinite; 
+    background: #000;
+}
+
+@keyframes bubleAnimation{
+    100%{
+        transform: scale(1.2);
+    }
+}
+/* *************************** */
+
+.circle-container{
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.circle{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: transparent;
+    animation-fill-mode: backwards;
+}
+
+.circle-1{
+    animation: moveToLeft 1s linear infinite;
+    border: 10px solid rgb(66, 212, 7);
+}
+
+@keyframes moveToLeft {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-60px);
+    }
+    
+}
+
+.circle-2{
+    animation: moveToRight 1s linear infinite;
+    border: 10px solid yellow;
+}
+
+@keyframes moveToRight {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(60px);
+    }
+    
+}
+
+.circle-3{
+    animation: moveToUp 1s linear infinite;
+    border: solid 10px black;
+}
+
+@keyframes moveToUp {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-60px);
+    }  
+}
+
+.circle-4{
+    animation: moveToDown 1s linear infinite;
+    border: 10px solid red;
+}
+
+@keyframes moveToDown {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(60px);
+    } 
+}
+
+/* **********************************************
+*************   Responsivness   *************
+******************************************** */
+
+@media only screen and (max-width: 600px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+    .box{
+        font-size: 20px;
+    }
+    .container div{
+        margin: 10px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container{
+        width: 90%;
+        margin: 5%;
+    }
+
+    .container div{
+        margin: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    body{
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 995px) {
+    body{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .container{
+        width: 40%;
+    }
+}
+
+@media only screen and(min-width: 1200px) {
+    
+}
